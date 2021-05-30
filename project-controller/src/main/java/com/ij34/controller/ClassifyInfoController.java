@@ -5,8 +5,6 @@ package com.ij34.controller;
  * 废品回收:大类、小类、规格 前端控制器
  * </p>
  *
- * @author gdlv
- * @since 2021-05-23
  */
 
 import com.ij34.service.ClassifyInfoService;
