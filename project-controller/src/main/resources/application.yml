@@ -18,9 +18,6 @@ spring:
 #    testWhileIdle: true
 #    testOnBorrow: false
 #    testOnReturn: false
-
-mybatis:
-  mapper-locations: classpath*:mapper/Order_InfoMapper.xml
-  config‐location: classpath:mybatis/mybatisConfig.xml
-#redis:
-#  config‐location: classpath:/redisson-config.yml
+#
+redis:
+  config‐location: classpath:/redisson-config.yml

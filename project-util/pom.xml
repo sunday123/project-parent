@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ij34.util</groupId>
-  <artifactId>yss-util</artifactId>
+  <artifactId>project-util</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>yss-util Maven Webapp</name>
+  <name>project-util Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
