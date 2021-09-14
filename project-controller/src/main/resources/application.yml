@@ -20,7 +20,7 @@ spring:
 #    testOnReturn: false
 
 mybatis:
-  mapper-locations: classpath*:mapper/Order_InfoMapper.xml
+  mapper-locations: classpath*:mapper/*.xml
   config‐location: classpath:mybatis/mybatisConfig.xml
 #redis:
 #  config‐location: classpath:/redisson-config.yml

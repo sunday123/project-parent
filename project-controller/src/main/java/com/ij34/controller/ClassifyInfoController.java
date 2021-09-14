@@ -7,11 +7,15 @@ package com.ij34.controller;
  *
  */
 
+import com.ij34.model.ClassifyInfo;
 import com.ij34.service.ClassifyInfoService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @Api(tags = "物品")
 @RestController
 @RequestMapping("/classify")
@@ -21,19 +25,18 @@ public class ClassifyInfoController {
     ClassifyInfoService classifyInfoService;
 
 
-    /**
-     * 新增数据
-     * @param record 实体对象
-     * @return 新增结果
-     */
-/*
+
+
     @ApiOperation(value = "新增数据")
     @PostMapping("/insert")
-    public ClassifyInfo insert(@RequestBody ClassifyInfo record) {
-        System.out.println("插入数据啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"+record.toString());
+    public Integer insert(@RequestBody ClassifyInfo record) {
         return classifyInfoService.insert(record);
     }
-*/
+    @ApiOperation(value = "查找数据")
+    @GetMapping("/select")
+    public List<ClassifyInfo> select() {
+        return classifyInfoService.select();
+    }
 
 
 }
