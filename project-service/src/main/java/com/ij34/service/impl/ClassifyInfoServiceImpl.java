@@ -23,6 +23,14 @@ public class ClassifyInfoServiceImpl implements ClassifyInfoService {
 
     @Override
     public List<ClassifyInfo> select() {
-        return classifyInfoMapper.selectAll2();
+        List<ClassifyInfo> list = classifyInfoMapper.selectAll2();
+        list.forEach(c -> {
+            System.out.println(c.getId()+"|"+c.getName());
+            c.getValueNum().forEach(childInfo -> {
+                System.out.println(childInfo.getA_BCD() + "------"+childInfo.getA_BCD());
+            });
+        });
+
+        return list;
     }
 }

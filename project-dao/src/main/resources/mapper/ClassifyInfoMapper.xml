@@ -4,11 +4,11 @@
     <resultMap id="customMap" type="com.ij34.model.ClassifyInfo">
         <id property="id" column="id"  jdbcType="INTEGER"/>
         <result property="name" column="name"  jdbcType="VARCHAR"/>
-        <result property="valueNum" column="vaule_num" typeHandler="com.ij34.typehandler.model.JsonTypeHandler"  />
+        <result property="valueNum" column="vaule_num" typeHandler="com.ij34.typehandler.model.GenericTypeHandler"  />
     </resultMap>
     <insert id="insert2">
        INSERT INTO classify_info ( `name`, `vaule_num`)
-       VALUES( #{name}, #{valueNum,typeHandler=com.ij34.typehandler.model.JsonTypeHandler});
+       VALUES( #{name}, #{valueNum,typeHandler=com.ij34.typehandler.model.GenericTypeHandler});
     </insert>
     <select id="selectAll2" resultMap="customMap">
         select c.* from classify_info c
