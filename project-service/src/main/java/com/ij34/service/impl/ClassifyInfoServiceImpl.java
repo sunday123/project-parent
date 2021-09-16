@@ -1,11 +1,12 @@
 package com.ij34.service.impl;
 
-import com.ij34.mapper.ClassifyInfoMapper;
+import com.ij34.model.ChildInfo;
 import com.ij34.model.ClassifyInfo;
 import com.ij34.service.ClassifyInfoService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -13,24 +14,27 @@ import java.util.List;
 public class ClassifyInfoServiceImpl implements ClassifyInfoService {
 
 
-    @Autowired
-    ClassifyInfoMapper classifyInfoMapper;
+
 
     @Override
     public Integer insert(ClassifyInfo record) {
-        return classifyInfoMapper.insert2(record);
+        System.out.println("插入："+record.toString());
+        try {
+            int i=0;
+            i=22000/i;
+        }catch (Exception e){
+            System.out.println("e::::"+e);
+        }
+        return 1;
     }
 
     @Override
     public List<ClassifyInfo> select() {
-        List<ClassifyInfo> list = classifyInfoMapper.selectAll2();
-        list.forEach(c -> {
-            System.out.println(c.getId()+"|"+c.getName());
-            c.getValueNum().forEach(childInfo -> {
-                System.out.println(childInfo.getA_BCD() + "------"+childInfo.getA_BCD());
-            });
-        });
-
+        List<ClassifyInfo> list =new ArrayList<>();
+        int i=10;
+        while (i-->0){
+            list.add(new ClassifyInfo(1L,"MING",new ArrayList<ChildInfo>()));
+        }
         return list;
     }
 }
