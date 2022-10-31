@@ -2,6 +2,7 @@ package com.ij34.mapper;
 
 
 import com.ij34.model.ClassifyInfo;
+import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
@@ -12,7 +13,7 @@ import tk.mybatis.mapper.common.Mapper;
  * @author gdlv
  * @since 2021-05-23
  */
-@org.apache.ibatis.annotations.Mapper
+@Repository
 public interface ClassifyInfoMapper extends Mapper<ClassifyInfo> {
 
 }
